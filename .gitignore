@@ -1,6 +1,7 @@
 *
-
 !.gitignore
 !README.md
 !week00/
+!week00/**
 !week01/
+!week01/**
