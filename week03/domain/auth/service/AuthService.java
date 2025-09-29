@@ -12,7 +12,6 @@ public class AuthService {
         if (token.startsWith("Bearer ")) {
             token = token.substring(7);
         }
-
         Claims claims = Jwts.parserBuilder()
                 .setSigningKey(secretKey.getBytes())
                 .build()
