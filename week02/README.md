@@ -443,3 +443,4 @@ DispatcherServlet
 - 스프링 AOP는 Controller 호출 전후에 Advice, Proxy, Reflection 등을 활용해 기능 추가
 
 "필터 체인에서 DispatcherServlet으로 넘어가면, HttpServlet/FrameworkServlet 단계를 거쳐 DispatcherServlet의 doDispatch가 실제 컨트롤러를 호출하고, 응답은 MessageConverter가 JSON 직렬화 후 반환한다.”
+
