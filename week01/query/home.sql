@@ -23,3 +23,4 @@ OR (mission.create_at < :last_create_at --페이징 시작
 OR (mission.create_at = :last_create_at AND mission.mission_id < :last_mission_id)))
 ORDER BY mission.create_at DESC, mission.mission_id DESC --최신순이 앞으로 오도록 정렬
 LIMIT 5;
+

@@ -23,6 +23,7 @@ CREATE TABLE `term` (
 );
 
 
+
 CREATE TABLE `users` ( --예약어때문에 users로 변경
   `user_id` bigint NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,

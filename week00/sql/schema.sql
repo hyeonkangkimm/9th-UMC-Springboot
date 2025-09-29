@@ -105,6 +105,7 @@ CREATE TABLE `review_photo` (
   FOREIGN KEY (`review_id`) REFERENCES `review` (`review_id`)
 );
 
+
 CREATE TABLE `review_comment` (
   `review_comment_id` bigint NOT NULL AUTO_INCREMENT,
   `content` text NULL,
