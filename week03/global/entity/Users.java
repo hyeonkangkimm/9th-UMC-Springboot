@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Users {
+public class Users extends BaseTimeEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,6 +28,7 @@ public class Users {
     @Enumerated(EnumType.STRING)
     private GenderType gender;
 
+    private LocalDateTime deletedAt;
     private LocalDate birth;
     private String detailAddress;
 
@@ -35,10 +36,6 @@ public class Users {
     private SocialType social;
 
     private Integer point;
-
-    private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
-    private LocalDateTime deletedAt;
 
     private String phoneNum;
     private String email;

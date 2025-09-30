@@ -1,12 +1,13 @@
 package com.example.umc9th.domain.Review.entity;
 
+import com.example.umc9th.global.entity.BaseTimeEntity;
 import com.example.umc9th.global.entity.Store;
 import com.example.umc9th.global.entity.Users;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
+
 
 import java.time.LocalDateTime;
 
@@ -15,14 +16,12 @@ import java.time.LocalDateTime;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Review {
+public class Review extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id; // review_id
 
     private double star;
-    private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
     private String content;
 
     @ManyToOne
@@ -39,6 +38,5 @@ public class Review {
         this.store = store;
         this.star = star;
         this.content = content;
-        this.createdAt = LocalDateTime.now();
     }
 }
