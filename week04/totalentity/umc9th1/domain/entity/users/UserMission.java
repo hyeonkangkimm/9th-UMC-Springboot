@@ -12,6 +12,7 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
+import lombok.NonNull;
 
 @Getter
 @Entity
@@ -39,8 +40,8 @@ public class UserMission extends BaseIdEntity {
     @JoinColumn(name="mission_id",nullable = false)
     private Mission mission;
 
-    public UserMission(Users user,
-                       Mission mission) {
+    public UserMission(@NonNull Users user,
+                       @NonNull Mission mission) {
         this.user = user;
         this.mission = mission;
     }
